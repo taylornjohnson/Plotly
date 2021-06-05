@@ -29,7 +29,7 @@ function buildMetadata(sample) {
       var otu_labels = result.otu_labels;
       var sample_values = result.sample_values;
   
-      // Build a Bubble Chart
+      // bubble chart
       var bubbleLayout = {
         title: "Bacteria Cultures Per Sample",
         margin: { t: 0 },
@@ -74,10 +74,9 @@ function buildMetadata(sample) {
   }
   
   function init() {
-    // Grab a reference to the dropdown select element
     var selector = d3.select("#selDataset");
   
-    // Use the list of sample names to populate the select options
+
     d3.json("samples.json").then((data) => {
       var sampleNames = data.names;
   
